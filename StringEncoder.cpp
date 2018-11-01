@@ -108,7 +108,7 @@ bool checkSequence(NODE* value) {
     }
 }
 
-NODE* decode(NODE* p) {
+NODE* encode(NODE* p) {
     NODE* auxiliary = cloneList(p);
     NODE* response = invert(auxiliary);
     NODE* firstNonVowel = NULL; 
@@ -150,6 +150,6 @@ NODE* decode(NODE* p) {
  
 int main() {
     NODE* p = NULL;
-    NODE* auxiliary = decode(p); 
+    NODE* auxiliary = encode(p); 
     return 0;
 }
