@@ -13,14 +13,14 @@ typedef struct estructure {
     struct estructure *next;
 } NODE;
  
-NODE* createList(char word[]) {
+NODE* createList(char phrase[]) {
     NODE *last = NULL;
     NODE *auxiliary = NULL;
     int counter;
  
-    for (counter = 0; counter < strlen(word); counter++) {
+    for (counter = 0; counter < strlen(phrase); counter++) {
         NODE *new_node = (NODE *) malloc(sizeof(NODE));
-        new_node->letter = word[counter];
+        new_node->letter = phrase[counter];
         new_node->next = NULL;
         if (last) {
             last->next = new_node;
